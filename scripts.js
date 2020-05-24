@@ -60,7 +60,6 @@ async function fetchPeople() {
     .sort((a, b) => {
       return a.name.localeCompare(b.name);
     });
-  console.log(allPeople);
   startInput();
 }
 
@@ -97,7 +96,6 @@ function matchPeople(userInput) {
     };
   });
   peopleResult = show;
-  console.log(peopleResult);
   render();
 }
 
@@ -171,7 +169,6 @@ function sumAges() {
 }
 
 function countGender() {
-  //console.log(peopleResult);
   let male = peopleResult.filter((person) => {
     return person.gender === 'male';
   });
