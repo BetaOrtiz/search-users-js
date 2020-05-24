@@ -1,0 +1,26 @@
+h1 {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search {
+  width: 100%;
+}
+
+button {
+  margin-top: 21px;
+}
+
+.result {
+  padding: 15px;
+  align-content: center;
+  width: 100%;
+}
+
+img {
+  border-radius: 100%;
+}
