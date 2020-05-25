@@ -1,35 +1,22 @@
-// carrega primeira resposta da API
+// state
 let allPeople = [];
-// conteúdo do quadro da esquerda
 let tabPeople = null;
-// conteúdo do quadro da direta
 let stats = null;
-// input
 let elems = null;
-// valor do input
 let userInput = null;
-// botão de buscar
 let button = null;
-// array de resultado depois da busca
 let peopleResult = null;
-// texto para mostrar quantos usuários foram encontrados
 let countPeople = null;
-// area de mostrar resultados
 let leftBoard = null;
-// area de mostrar estatísticas
 let rightBoard = null;
-// texto títuo de estatísticas
 let displayStats = null;
 
 window.addEventListener('load', () => {
-  // input
   elems = document.querySelector('.autocomplete');
-  //userInput = elems.value.toLowerCase();
   elems.focus();
-  // button
   button = document.querySelector('button');
   button.disabled = true;
-  // rigth and left results areas
+  // right and left results areas
   tabPeople = document.querySelector('#peopleList');
   stats = document.querySelector('#stats');
   displayStats = document.querySelector('#displayStats');
@@ -81,6 +68,7 @@ function startInput() {
 
 function matchPeople(userInput) {
   leftBoard.style.display = '';
+  
   rightBoard.style.display = '';
   var match = allPeople.filter(
     (person) => person.name.toLowerCase().indexOf(userInput) >= 0
@@ -181,8 +169,7 @@ function countGender() {
   };
 }
 
-// funções de apoio - Controla ativação de botão, display dos panels, limpa tudo pra próxima consulta
-
+// support cleaning functions
 function controlPanels() {
   if (peopleResult == '') {
     tabPeople.style.display = 'none';
